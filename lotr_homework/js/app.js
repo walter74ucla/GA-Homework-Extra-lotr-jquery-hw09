@@ -1,6 +1,6 @@
-console.log("LOTR homework js file is connected");
-console.log("HINT: Click on the 'Elements' tab to see the elements that you are creating");
-console.log("---------------")
+// console.log("LOTR homework js file is connected");
+// console.log("HINT: Click on the 'Elements' tab to see the elements that you are creating");
+// console.log("---------------")
 // ==============================
 //       Dramatis Personae
 // ==============================
@@ -47,8 +47,14 @@ const makeMiddleEarth = () => {
   console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
-
+  const $section = $('<section/>');
+  $section.attr('id', 'middle-earth');
+  
+  
   // 2. append the section to the body of the DOM.
+  // This ways does step 1 and step 2 in one step...
+  // $('body').append($('<section/>').attr('id', 'middle-earth'));
+  $('body').append($section);
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
@@ -59,8 +65,15 @@ const makeMiddleEarth = () => {
   //   3c. includes an h1 with the name of the land inside each land article
 
   //   3d. appends each land to the middle-earth section
-
+    for(let i=0; i<lands.length; i++ ){  
+      const $article = $('<article/>');
+      $('#middle-earth').append($article);
+      $article.attr('id', lands[i]).append(`<h1>${lands[i]}</h1>`);  
+    }
 };
+
+// $('#hobbit.lands[i]').append('<h1>hobbits.lands[i]</h1>');
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
