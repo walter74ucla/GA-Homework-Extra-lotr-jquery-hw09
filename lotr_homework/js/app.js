@@ -92,6 +92,14 @@ const makeHobbits = () => {
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
+  const $ul = $('<ul/>');
+  for(let i=0; i<hobbits.length; i++ ){  
+      const $li = $('<li/>');
+      $li.attr('class', 'hobbit');
+      $ul.append(`<li>${hobbits[i]}</li>`);
+      // console.log($ul);
+    }
+    $('#The-Shire').append($ul);
 
 };
 
