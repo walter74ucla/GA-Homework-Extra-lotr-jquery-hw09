@@ -6,6 +6,12 @@ body {
   font-weight: 800;
 }
 
+.the-white {
+  background:  white;
+  border: 2px solid grey;
+}
+
+
 h1 {
   font-family: 'Condiment', cursive;
 }
